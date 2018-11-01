@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像轮播</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        div.carousel{
+            width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="carousel" data-ride="carousel" id="myCarousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/p1.jpg"/>
+                    <div class="carousel-caption">
+                        <h3>First slide picture</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deserunt explicabo facere iste iusto, libero numquam quia sunt totam veniam! Corporis dolorem facere id iure laboriosam nam praesentium quasi repellendus.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/p2.jpg"/>
+                    <div class="carousel-caption">
+                        <h3>Second slide picture</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus iure magnam nostrum, officiis perferendis quia quidem voluptates? At cupiditate delectus dolore ducimus, facilis nesciunt nostrum qui sunt tempore veniam veritatis?</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/p3.jpg"/>
+                    <div class="carousel-caption">
+                        <h3>Third slide picture</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cupiditate delectus, dolore dolorem enim error, esse explicabo non obcaecati, officiis omnis sit unde. Cupiditate eos error magni maxime? Dolore, dolores!</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ul>
+            <a href="#myCarousel" class="carousel-control left" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#myCarousel" class="carousel-control right" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

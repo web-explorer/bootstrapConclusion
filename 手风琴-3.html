@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="panel-group" id="myAccordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="#myCollapse1" class="btn btn-primary" data-toggle="collapse" data-parent="#myAccordion">myCollapse1 title</a>
+                    </h3>
+                </div>
+                <div class="collapse in" id="myCollapse1">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dignissimos fugit placeat quis similique! Ab aliquam aliquid amet aperiam consequatur deserunt dolorum illum nemo nisi non numquam, obcaecati qui sed.</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#myCollapse2" data-parent="#myAccordion">myCollapse2 title</button>
+                    </h3>
+                </div>
+                <div class="collapse" id="myCollapse2">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda beatae deleniti dicta dignissimos dolor earum incidunt iusto mollitia necessitatibus nulla odio omnis provident quod reprehenderit sapiente ullam, voluptatibus voluptatum!</div>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#myCollapse3" data-parent="#myAccordion">myCollapse3 title</button>
+                    </h3>
+                </div>
+                <div class="collapse" id="myCollapse3">
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto consequatur dolorem doloremque doloribus ea error est eum impedit ipsum, magni maiores neque omnis rem reprehenderit totam voluptatem voluptatibus!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
