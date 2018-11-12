@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3 transform实现div居中</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+            position: relative;
+        }
+        div {
+            width: 600px;
+            height: 400px;
+            background-color: #ccc;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%,-50%);		/*IE 9*/
+            -moz-transform: translate(-50%,-50%);		/*Firefox*/
+            -webkit-transform: translate(-50%,-50%);	/*Safari and Chrome*/
+            -o-transform: translate(-50%,-50%);			/*Opera*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

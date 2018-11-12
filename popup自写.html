@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popup自写</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+        }
+        #popup {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #popup-bg {
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #popup-content {
+            width: 600px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+        #close {
+            display: block;
+            margin: 10px auto;
+        }
+        #popup.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="launch">Launch popup window</button>
+    <div id="popup">
+        <div id="popup-bg"></div>
+        <div id="popup-content">
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem, beatae commodi dolor eligendi
+                facere tempore. A at commodi illum modi perspiciatis quia saepe, sequi voluptatum. Illum ipsum nesciunt
+                nihil.
+            </div>
+            <div>Ab aliquid commodi consectetur consequatur doloremque doloribus ducimus fugiat id laborum, laudantium
+                libero nesciunt porro quia quibusdam quo rem tempore? Aliquam aspernatur assumenda expedita id nesciunt
+                quaerat temporibus totam vel!
+            </div>
+            <button type="button" id="close">Close me</button>
+        </div>
+    </div>
+    <script>
+        $("#launch,#popup-bg,#close").click(function(){
+            $("#popup").toggleClass("show");
+        });
+    </script>
+</body>
+</html>
