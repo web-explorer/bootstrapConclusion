@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右下角快速返回到网页顶部的导航</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+        #top {
+            box-sizing: border-box;
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            border: 1px solid #000;
+            padding-top: 25px;
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+            cursor: pointer;
+            display: none;
+        }
+        #top:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent transparent #000 transparent;
+            position: absolute;
+            left: 50%;
+            top: 5px;
+            margin-left: -8px;
+        }
+        #top.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis delectus, earum error est ipsum quo velit.
+    Architecto at beatae harum, ipsa maiores obcaecati repellat sapiente. Architecto expedita praesentium quasi
+    quisquam.
+</div>
+<div>Aut culpa cupiditate, deserunt eaque, earum enim error et eveniet exercitationem itaque labore laboriosam libero
+    mollitia necessitatibus nemo neque nulla obcaecati, odit quaerat quam quas recusandae reiciendis velit vero
+    voluptate!
+</div>
+<div>Atque, cum dolore doloribus expedita fuga fugiat, in magni nam nisi nostrum omnis quisquam recusandae similique
+    temporibus voluptatem. Autem facilis iusto nobis praesentium quisquam ratione sapiente sed tempore vitae.
+    Consequatur.
+</div>
+<div>Eum mollitia pariatur placeat ratione sunt tenetur. Dolores, ducimus, voluptas. Ab adipisci, architecto at
+    consequatur cum dolorum error esse eum facilis illo, iusto magni minus nulla omnis quibusdam quos similique?
+</div>
+<div>A accusantium aperiam at blanditiis cumque delectus dolor dolorum enim, est et ex fugiat inventore ipsa iure maxime
+    nostrum odio officia quas quidem quis recusandae reiciendis suscipit temporibus totam ullam!
+</div>
+<div>Accusantium asperiores, debitis, deserunt dolores ducimus eius eligendi, eos error eum eveniet fuga fugiat
+    inventore iusto laboriosam laborum libero nemo nostrum pariatur qui reprehenderit repudiandae rerum saepe sequi sint
+    voluptates?
+</div>
+<div>Debitis, fugit in incidunt ipsam quae quod velit. Labore mollitia omnis tenetur. Commodi doloribus nostrum possimus
+    quibusdam sapiente voluptatibus. Eaque eius incidunt ipsum iste iure minima odio, praesentium quia quos?
+</div>
+<div>Accusamus accusantium autem, beatae consequuntur, distinctio ducimus eligendi fugiat laborum libero maiores
+    molestiae nemo obcaecati provident quae reprehenderit? Debitis excepturi explicabo laboriosam modi nam natus
+    necessitatibus possimus rerum vero, voluptatem!
+</div>
+<div>Dolor laborum nesciunt placeat praesentium, quos totam! Aspernatur culpa illum iusto non tempora. Blanditiis
+    cumque, doloremque, eius fugiat illo laudantium nam neque numquam omnis quia recusandae reiciendis repudiandae
+    tenetur voluptatum!
+</div>
+<div>A, ab alias aperiam, architecto delectus deleniti doloribus ea eaque eligendi ex facere fugit illum incidunt iure
+    necessitatibus neque nostrum nulla praesentium quidem quod rem sed, tempora ut. Ad, explicabo.
+</div>
+<div>A autem debitis exercitationem facere incidunt iste nam pariatur reprehenderit rerum suscipit. Aliquid aperiam
+    architecto asperiores assumenda, consectetur cum earum, explicabo id incidunt mollitia nobis officia optio
+    praesentium sunt vero?
+</div>
+<div>Blanditiis cumque deleniti et incidunt, itaque laborum nihil, omnis porro quas quasi sapiente suscipit voluptate?
+    Assumenda beatae dolor expedita natus? Animi asperiores aspernatur in ipsa nulla, ratione similique suscipit velit.
+</div>
+<div>Accusantium deleniti dolorum necessitatibus neque, quidem sunt. Adipisci dolor excepturi explicabo in non officia
+    omnis quidem! Alias animi, hic illo ipsa itaque magnam numquam officia quo, quod saepe sint voluptas!
+</div>
+<div>Accusamus accusantium atque blanditiis distinctio, dolore doloremque dolores et iste minus nihil nulla, perferendis
+    quae quis quisquam quod quos ratione repudiandae unde voluptate voluptatem? Ex mollitia porro recusandae sed
+    voluptas?
+</div>
+<div>A adipisci aliquam amet debitis doloremque eaque eos est ex exercitationem id illo impedit in iste iusto, laborum
+    minima nemo non praesentium, qui quibusdam quidem saepe soluta vel vero voluptatum.
+</div>
+<div>Aliquid architecto aut autem blanditiis consequuntur cum cumque dicta dolor dolore eius ex, fugit harum hic illo in
+    laudantium, maxime modi molestias odio optio quasi quidem, recusandae saepe temporibus velit?
+</div>
+<div>Est facere fugiat possimus quia saepe veniam voluptatum? Animi architecto atque culpa cupiditate doloremque enim
+    eveniet fuga fugit impedit, in, ipsam iste iure laboriosam nihil nobis nostrum officiis, soluta temporibus.
+</div>
+<div>Architecto atque consequatur doloribus eveniet excepturi exercitationem facere facilis fugit id impedit ipsum iste
+    laborum nobis non odio odit quae qui quibusdam recusandae repudiandae rerum, similique sint soluta tempora ullam?
+</div>
+<div>Consequatur deserunt, laboriosam. Ad, autem cupiditate dignissimos distinctio dolorem doloremque dolorum
+    exercitationem fugit harum illum in labore laborum laudantium non, officia porro quibusdam quidem reprehenderit sit
+    tempora temporibus vero voluptatum.
+</div>
+<div>Ad animi, asperiores commodi debitis dignissimos eum eveniet, expedita fugiat fugit incidunt itaque laudantium
+    magni maxime nam necessitatibus repellendus, reprehenderit saepe totam voluptas voluptatem? Dolore error excepturi
+    nobis repellendus soluta!
+</div>
+<div>Aperiam consequuntur dignissimos labore obcaecati provident? Accusamus earum, exercitationem facere labore odio quo
+    ratione recusandae velit. Aliquam, amet animi autem deleniti illo laboriosam modi, nobis quis sapiente, temporibus
+    vel vitae.
+</div>
+<div>Assumenda dignissimos enim impedit voluptas voluptatum! Dicta dignissimos doloremque facilis fugit laborum minima
+    porro quibusdam, voluptatum. A cupiditate deserunt doloremque facilis minima molestiae, numquam odio odit omnis
+    quidem, sequi sunt!
+</div>
+<div>Ab ad alias aliquid blanditiis eum facilis, fugiat id impedit in inventore ipsa labore, mollitia necessitatibus
+    nesciunt nisi, odit quasi qui quibusdam quisquam voluptatum. Corporis maxime quibusdam ratione unde vero.
+</div>
+<div>Accusamus commodi consectetur dicta eligendi fugit minus nisi nostrum praesentium quia repellat, sapiente, tenetur
+    voluptatem voluptates? Atque autem dolorem libero modi, molestias natus necessitatibus optio pariatur porro possimus
+    sit tempore.
+</div>
+<div>Ad adipisci architecto at consequuntur dignissimos dolores est illum iure, neque nisi non numquam obcaecati odit
+    officia perspiciatis quisquam quo sequi? Aliquid atque iusto, molestias nam omnis pariatur tempore voluptatem.
+</div>
+<div>Amet commodi consequuntur debitis distinctio doloribus, eius esse, facere hic impedit ipsum iure labore laudantium
+    nemo numquam odit quasi ullam? Alias aperiam autem distinctio, doloribus exercitationem laboriosam laudantium odit
+    quos.
+</div>
+<div>Labore, nemo voluptate. Aperiam cumque eaque odit reiciendis voluptas voluptatibus! At aut cumque dolorum ducimus
+    enim eos esse et facere incidunt laboriosam laborum maiores non obcaecati placeat, quasi repudiandae vel?
+</div>
+<div>Cum dignissimos enim error est laboriosam quisquam sequi tempore totam velit vitae? Aliquid animi beatae
+    consectetur consequatur culpa delectus dolor dolorem, est, facere fugiat, minima nam perferendis tempore vel velit!
+</div>
+<div>Doloremque exercitationem incidunt necessitatibus numquam porro sint temporibus, velit? Deleniti eligendi harum
+    illum inventore necessitatibus nostrum reiciendis repellendus voluptates, voluptatum. Alias cumque dignissimos
+    doloremque doloribus ea nam perferendis, quod sed?
+</div>
+<div>Dolore, libero, natus? Consequuntur cum explicabo quos temporibus vel! Adipisci aliquid amet asperiores at commodi
+    debitis dignissimos iusto libero, molestiae molestias natus necessitatibus neque quaerat quidem recusandae soluta
+    temporibus tenetur.
+</div>
+<div>Aliquid architecto asperiores aut distinctio eaque eos error excepturi facilis fugiat harum magnam minus nam neque,
+    nulla, obcaecati officia quia quo quos reiciendis sequi tempore unde voluptate! Vel, vitae voluptatem?
+</div>
+<div>Aperiam facilis in ipsum magni numquam perspiciatis quasi. Aliquam consectetur delectus deleniti, dignissimos dolor
+    est fugiat hic iure mollitia pariatur quae quos sunt temporibus totam veniam voluptatibus voluptatum? Inventore,
+    repellendus?
+</div>
+<div>Aperiam autem commodi debitis deleniti, dolor dolore fuga maiores minus optio quibusdam quo sunt! Aperiam error et
+    eveniet illo incidunt, ipsam iusto modi mollitia neque quis quos reprehenderit sunt temporibus.
+</div>
+<div>Amet cum doloremque ea earum esse expedita, facere, incidunt laborum nihil obcaecati optio porro, repellendus
+    voluptatibus! A ab cum dolores et illum maxime, odit officia recusandae repellat temporibus veritatis, voluptatibus.
+</div>
+<div>Atque, doloremque optio. Aperiam at consectetur cum debitis distinctio doloribus eligendi error, facere illum
+    impedit ipsam maxime molestias nam provident ratione reprehenderit repudiandae sed similique temporibus veniam.
+    Doloribus eaque, sed.
+</div>
+<div>Alias animi aspernatur aut, autem delectus deleniti distinctio dolor earum fuga illum ipsa magni officiis quaerat
+    qui quibusdam quod recusandae reprehenderit soluta tempora tenetur ullam velit veniam veritatis voluptatem
+    voluptates!
+</div>
+<div>Aperiam at atque aut consectetur consequuntur cumque debitis dolor dolorum earum eligendi eos ex facilis fugiat,
+    necessitatibus nemo optio perspiciatis porro, quaerat quas quo repudiandae sequi sunt ullam veritatis, voluptatum!
+</div>
+<div>Culpa, debitis et hic illum labore maiores nostrum omnis quasi ratione rerum? Ab autem cumque, eaque enim id iusto
+    magnam nemo non odit repellendus sequi, suscipit tempore, vel vero voluptatem.
+</div>
+<div>Architecto distinctio ex fugiat illo labore laborum libero nam ratione sapiente ut! Culpa cum eius minima
+    perspiciatis ratione reiciendis repellat sit soluta ullam ut? Autem id ipsum laudantium molestias saepe?
+</div>
+<div>Aperiam autem commodi, corporis dignissimos distinctio doloribus dolorum eaque eligendi eum, ex fugiat incidunt
+    ipsa modi necessitatibus nisi numquam obcaecati odio odit optio placeat quasi repellendus reprehenderit rerum velit
+    voluptatum.
+</div>
+<div id="top">TOP</div>
+<script>
+    window.onscroll = function() {
+        var scrollTop = $(window).scrollTop();//$(window).scrollTop()方法返回或设置浏览器右侧导航条垂直位置，如此写法兼容所有浏览器。
+        if(scrollTop>300) {
+            $('#top').addClass('show');
+        } else {
+            $('#top').removeClass('show');
+        }
+    };
+    $('#top').click(function(){
+        $(window).scrollTop(0);
+    });
+</script>
+</body>
+</html>
