@@ -183,14 +183,14 @@
 </div>
 <div id="top">TOP</div>
 <script>
-    window.onscroll = function() {
+    $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();//$(window).scrollTop()方法返回或设置浏览器右侧导航条垂直位置，如此写法兼容所有浏览器。
-        if(scrollTop>300) {
+        if(scrollTop>331) {
             $('#top').addClass('show');
         } else {
             $('#top').removeClass('show');
         }
-    };
+    });
     $('#top').click(function(){
         $(window).scrollTop(0);
     });
